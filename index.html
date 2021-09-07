@@ -28,6 +28,18 @@
     <link rel="stylesheet" href="css/custom.css">
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
 
+        <!-- Resources -->
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/frozen.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    
+    <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
+
+    <!-- Chart code -->
+    <script src="viz.js"></script>
+
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -216,7 +228,47 @@
         <div class="container">
             <div class="section-title text-left">
                 <h3>STOP 2: CITIES</h3>
-                <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
+                <p>At the second level of granularity of our research we have cities</p>
+
+                <div id="chartdiv1" class="chartdiv"></div>
+                <br>
+                <br>
+                <br>
+                
+                <div id="carouselExampleIndicators" class="carousel slide">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div id="chartdiv" class="chartdiv"></div>
+                    </div>
+                    <div class="carousel-item">
+                      <div id="chartdiv2" class="chartdiv"></div>
+                    </div>
+                    <div class="carousel-item">
+                      <div id="chartdiv3" class="chartdiv"></div>
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div id="chartdiv4" class="chartdiv"></div>
+                <br>
+
             </div><!-- end title -->
         </div><!-- end container -->
     </div><!-- end section -->
