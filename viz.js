@@ -498,3 +498,15 @@ dateTitle.fontWeight = 600;
 dateTitle.align = "left";
 
 }); // end am4core.ready()
+
+// call the aeroplane maps' scripts
+
+function callScript(fileName){
+
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = fileName;
+    document.getElementsByTagName("head")[0].appendChild(script);
+    return false;
+
+}
