@@ -510,3 +510,30 @@ function callScript(fileName){
     return false;
 
 }
+
+// default map
+am4core.ready(function() {
+
+// Themes begin
+    am4core.useTheme(am4themes_frozen);
+// Themes end
+
+// Create map instance
+    var chart = am4core.create("mapdiv", am4maps.MapChart);
+    chart.geodata = am4geodata_worldLow;
+    chart.projection = new am4maps.projections.Miller();
+    chart.homeZoomLevel = 1;
+    chart.homeGeoPoint = {
+        latitude: 38,
+        longitude: 0
+    };
+
+// Create map polygon series
+    var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
+    polygonSeries.useGeodata = true;
+    polygonSeries.mapPolygons.template.fill = chart.colors.getIndex(0).lighten(0.5);
+    polygonSeries.mapPolygons.template.nonScalingStroke = true;
+    polygonSeries.exclude = ["AQ"];
+
+
+}); // end am4core.ready()
