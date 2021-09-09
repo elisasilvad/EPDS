@@ -8,10 +8,10 @@ am4core.ready(function() {
     var chart = am4core.create("mapdiv", am4maps.MapChart);
     chart.geodata = am4geodata_worldLow;
     chart.projection = new am4maps.projections.Miller();
-    chart.homeZoomLevel = 2.5;
+    chart.homeZoomLevel = 2.7;
     chart.homeGeoPoint = {
-        latitude: 38,
-        longitude: -60
+        latitude: 45,
+        longitude: -30
     };
 
 // Create map polygon series
@@ -39,7 +39,8 @@ am4core.ready(function() {
         return city;
     }
 
-    var wicklow = addCity({ "latitude": 53, "longitude": -6.41667 }, "Wicklow");
+    var venice = addCity({ "latitude": 45.43713, "longitude": -12.33265 }, "Venice");
+    var wicklow = addCity({ "latitude": 53, "longitude": -6.41667 }, "County Wicklow");
     var london = addCity({ "latitude": 51.50853, "longitude": -0.12574 }, "London");
     var budapest = addCity({ "latitude": 47.49835, "longitude": 19.04045 }, "Budapest");
     var minneapolis = addCity({ "latitude": 44.97997, "longitude": -93.26384 }, "Minneapolis");
@@ -73,6 +74,7 @@ am4core.ready(function() {
         return line;
     }
 
+    addLine(venice, wicklow);
     addLine(wicklow, london);
     addLine(london, budapest);
     addLine(budapest, paris);
