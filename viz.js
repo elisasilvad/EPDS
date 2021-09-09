@@ -537,3 +537,571 @@ am4core.ready(function() {
 
 
 }); // end am4core.ready()
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+
+// INSTITUTIONS
+//ACQUIRING
+am4core.ready(function() {
+
+// Themes begin
+am4core.useTheme(am4themes_frozen);
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+var chart = am4core.create("chartdiv5", am4charts.XYChart);
+chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+chart.data = [{
+ "inst":"Collezione Privata Italia",
+"paintings":3813
+},{
+ "inst":"Mercato Antiquario Italia",
+"paintings":1254
+},{
+ "inst":"Asta Christies Londra",
+"paintings":669
+},{
+ "inst":"Collezione Privata Roma",
+"paintings":418
+},{
+ "inst":"Asta Sothebys Londra",
+"paintings":415
+},{
+ "inst":"Collezione Sh Kress New York Ny",
+"paintings":344
+},{
+ "inst":"Pinacoteca Dellaccademia Carrara Bergamo",
+"paintings":248
+},{
+ "inst":"Asta Sothebys New York Ny",
+"paintings":246
+},{
+ "inst":"Asta Christies New York Ny",
+"paintings":222
+},{
+ "inst":"Mercato Antiquario Milano",
+"paintings":202
+},{
+ "inst":"National Gallery Of Art Washington Dc",
+"paintings":183
+},{
+ "inst":"Contini Bonacossi Firenze",
+"paintings":139
+},{
+ "inst":"The Walters Art Museum Baltimora Md",
+"paintings":138
+},{
+ "inst":"Collezione Privata Londra",
+"paintings":136
+},{
+ "inst":"Asta Farsetti Prato",
+"paintings":131
+},{
+ "inst":"Mercato Antiquario Firenze",
+"paintings":129
+},{
+ "inst":"Philadelphia Museum Of Art Philadelphia Pa",
+"paintings":128
+},{
+ "inst":"Collezione Privata Milano",
+"paintings":126
+},{
+ "inst":"Mercato Antiquario Roma",
+"paintings":102
+},{
+ "inst":"Museo Thyssenbornemisza Madrid",
+"paintings":100
+}]
+
+var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+categoryAxis.renderer.grid.template.location = 0;
+categoryAxis.dataFields.category = "inst";
+categoryAxis.renderer.minGridDistance = 40;
+categoryAxis.fontSize = 0;
+
+var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+valueAxis.min = 0;
+valueAxis.max = 4500;
+valueAxis.strictMinMax = true;
+valueAxis.renderer.minGridDistance = 30;
+// axis break
+var axisBreak = valueAxis.axisBreaks.create();
+axisBreak.startValue = 700;
+axisBreak.endValue = 2000;
+//axisBreak.breakSize = 0.005;
+
+// fixed axis break
+var d = (axisBreak.endValue - axisBreak.startValue) / (valueAxis.max - valueAxis.min);
+axisBreak.breakSize = 0.05 * (1 - d) / d; // 0.05 means that the break will take 5% of the total value axis height
+
+// make break expand on hover
+var hoverState = axisBreak.states.create("hover");
+hoverState.properties.breakSize = 1;
+hoverState.properties.opacity = 0.1;
+hoverState.transitionDuration = 1500;
+
+axisBreak.defaultState.transitionDuration = 1000;
+
+var series = chart.series.push(new am4charts.ColumnSeries());
+series.dataFields.categoryX = "inst";
+series.dataFields.valueY = "paintings";
+series.columns.template.tooltipText = "{categoryX}:\n{valueY.value}";
+series.columns.template.tooltipY = 0;
+series.columns.template.strokeOpacity = 0;
+
+// as by default columns of the same series are of the same color, we add adapter which takes colors from chart.colors color set
+series.columns.template.adapter.add("fill", function(fill, target) {
+  return chart.colors.getIndex(target.dataItem.index);
+});
+
+var topContainer = chart.chartContainer.createChild(am4core.Container);
+topContainer.layout = "absolute";
+topContainer.toFront();
+topContainer.paddingBottom = 15;
+topContainer.width = am4core.percent(100);
+
+var dateTitle = topContainer.createChild(am4core.Label);
+dateTitle.text = "[font-size:18px]...and acquiring:[/]\n[bold font-size:30px]the 20 most relevant acquiring institutions[/]";
+dateTitle.fontWeight = 600;
+dateTitle.align = "right";
+
+}); // end am4core.ready()
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+
+//GIVING
+am4core.ready(function() {
+
+// Themes begin
+am4core.useTheme(am4themes_frozen);
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+var chart = am4core.create("chartdiv6", am4charts.XYChart);
+chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+chart.data = [{
+ "inst":"Collezione Privata Italia",
+"paintings":1845
+},{
+ "inst":"Mercato Antiquario Italia",
+"paintings":1199
+},{
+ "inst":"Asta Christies Londra",
+"paintings":628
+},{
+ "inst":"Asta Sothebys Londra",
+"paintings":538
+},{
+ "inst":"Collezione Sh Kress New York Ny",
+"paintings":483
+},{
+ "inst":"Contini Bonacossi Firenze",
+"paintings":359
+},{
+ "inst":"Mercato Antiquario Milano",
+"paintings":277
+},{
+ "inst":"Asta Sothebys New York Ny",
+"paintings":248
+},{
+ "inst":"Sestieri Roma",
+"paintings":184
+},{
+ "inst":"Collezione I Brass Venezia",
+"paintings":177
+},{
+ "inst":"Collezione Cook Londra",
+"paintings":166
+},{
+ "inst":"Koetser New York Ny",
+"paintings":165
+},{
+ "inst":"Asta Pandolfini Firenze",
+"paintings":156
+},{
+ "inst":"F Mont New York Ny",
+"paintings":134
+},{
+ "inst":"Mercato Antiquario Firenze",
+"paintings":129
+},{
+ "inst":"Collezione M Massarenti Roma",
+"paintings":124
+},{
+ "inst":"Collezione Stramezzi Crema",
+"paintings":123
+},{
+ "inst":"Collezione Jg Johnson Philadelphia Pa",
+"paintings":122
+},{
+ "inst":"Collezione Carrara Bergamo",
+"paintings":120
+},{
+ "inst":"Mercato Antiquario Roma",
+"paintings":110
+}]
+
+var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+categoryAxis.renderer.grid.template.location = 0;
+categoryAxis.dataFields.category = "inst";
+categoryAxis.renderer.minGridDistance = 40;
+categoryAxis.fontSize = 0;
+
+var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+valueAxis.min = 0;
+valueAxis.max = 2100;
+valueAxis.strictMinMax = true;
+valueAxis.renderer.minGridDistance = 30;
+// axis break
+var axisBreak = valueAxis.axisBreaks.create();
+axisBreak.startValue = 500;
+axisBreak.endValue = 900;
+//axisBreak.breakSize = 0.005;
+
+// fixed axis break
+var d = (axisBreak.endValue - axisBreak.startValue) / (valueAxis.max - valueAxis.min);
+axisBreak.breakSize = 0.05 * (1 - d) / d; // 0.05 means that the break will take 5% of the total value axis height
+
+// make break expand on hover
+var hoverState = axisBreak.states.create("hover");
+hoverState.properties.breakSize = 1;
+hoverState.properties.opacity = 0.1;
+hoverState.transitionDuration = 1500;
+
+axisBreak.defaultState.transitionDuration = 1000;
+
+var series = chart.series.push(new am4charts.ColumnSeries());
+series.dataFields.categoryX = "inst";
+series.dataFields.valueY = "paintings";
+series.columns.template.tooltipText = "{categoryX}:\n{valueY.value}";
+series.columns.template.tooltipY = 0;
+series.columns.template.strokeOpacity = 0;
+
+// as by default columns of the same series are of the same color, we add adapter which takes colors from chart.colors color set
+series.columns.template.adapter.add("fill", function(fill, target) {
+  return chart.colors.getIndex(target.dataItem.index);
+});
+
+var topContainer = chart.chartContainer.createChild(am4core.Container);
+topContainer.layout = "absolute";
+topContainer.toFront();
+topContainer.paddingBottom = 15;
+topContainer.width = am4core.percent(100);
+
+var dateTitle = topContainer.createChild(am4core.Label);
+dateTitle.text = "[font-size:18px]The dominance of Italian institutions in giving:[/]\n[bold font-size:30px]the 20 most relevant giving institutions[/]";
+dateTitle.fontWeight = 600;
+dateTitle.align = "right";
+
+}); // end am4core.ready()
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------
+// ACQUIRING AND GIVING
+am4core.ready(function() {
+
+// Themes begin
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+var chart = am4core.create('chartdiv7', am4charts.XYChart)
+chart.colors.step = 2;
+
+chart.legend = new am4charts.Legend()
+chart.legend.position = 'top'
+chart.legend.paddingBottom = 20
+chart.legend.labels.template.maxWidth = 95
+
+var xAxis = chart.xAxes.push(new am4charts.CategoryAxis())
+xAxis.dataFields.category = 'category'
+xAxis.renderer.cellStartLocation = 0.1
+xAxis.renderer.cellEndLocation = 0.9
+xAxis.renderer.grid.template.location = 0;
+
+var yAxis = chart.yAxes.push(new am4charts.ValueAxis());
+yAxis.min = 0;
+
+function createSeries(value, name) {
+    var series = chart.series.push(new am4charts.ColumnSeries())
+    series.dataFields.valueY = value
+    series.dataFields.categoryX = 'category'
+    series.name = name
+
+    series.events.on("hidden", arrangeColumns);
+    series.events.on("shown", arrangeColumns);
+
+    var bullet = series.bullets.push(new am4charts.LabelBullet())
+    bullet.interactionsEnabled = false
+    bullet.dy = 30;
+    bullet.label.text = '{valueY}'
+    bullet.label.fill = am4core.color('#ffffff')
+
+    return series;
+}
+
+chart.data = [{
+ category:"Collezione-privata-italia",
+first:3813,
+second:1845
+},{
+ category:"Mercato-antiquario-italia",
+first:1254,
+second:1199
+},{
+ category:"Asta-christies-londra",
+first:669,
+second:628
+},{
+ category:"Collezione-privata-roma",
+first:418,
+second:58
+}
+]
+
+createSeries('first', 'Acquired paintings');
+createSeries('second', 'Given paintings');
+//createSeries('third', 'The Third');
+
+function arrangeColumns() {
+
+    var series = chart.series.getIndex(0);
+
+    var w = 1 - xAxis.renderer.cellStartLocation - (1 - xAxis.renderer.cellEndLocation);
+    if (series.dataItems.length > 1) {
+        var x0 = xAxis.getX(series.dataItems.getIndex(0), "categoryX");
+        var x1 = xAxis.getX(series.dataItems.getIndex(1), "categoryX");
+        var delta = ((x1 - x0) / chart.series.length) * w;
+        if (am4core.isNumber(delta)) {
+            var middle = chart.series.length / 2;
+
+            var newIndex = 0;
+            chart.series.each(function(series) {
+                if (!series.isHidden && !series.isHiding) {
+                    series.dummyData = newIndex;
+                    newIndex++;
+                }
+                else {
+                    series.dummyData = chart.series.indexOf(series);
+                }
+            })
+            var visibleCount = newIndex;
+            var newMiddle = visibleCount / 2;
+
+            chart.series.each(function(series) {
+                var trueIndex = chart.series.indexOf(series);
+                var newIndex = series.dummyData;
+
+                var dx = (newIndex - trueIndex + middle - newMiddle) * delta
+
+                series.animate({ property: "dx", to: dx }, series.interpolationDuration, series.interpolationEasing);
+                series.bulletsContainer.animate({ property: "dx", to: dx }, series.interpolationDuration, series.interpolationEasing);
+            })
+        }
+    }
+}
+
+}); // end am4core.ready()
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------
+//NETWORK
+am4core.ready(function() {
+
+// Themes begin
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+var chart = am4core.create("chartdiv8", am4charts.ChordDiagram);
+
+// colors of main characters
+chart.colors.saturation = 0.45;
+chart.colors.step = 3;
+var colors = {
+    Rachel:chart.colors.next(),
+    Monica:chart.colors.next(),
+    Phoebe:chart.colors.next(),
+    Ross:chart.colors.next(),
+    Joey:chart.colors.next(),
+    Chandler:chart.colors.next()
+}
+
+// data was provided by: https://www.reddit.com/user/notrudedude
+
+chart.data = [
+{"from":"National Gallery Of Art Washington Dc", "to":"Collezione Sh Kress New York Ny", "value":135},
+{"from":"Collezione Sh Kress New York Ny", "to":"National Gallery Of Art Washington Dc", "value":135},
+{"from":"Collezione Sh Kress New York Ny", "to":"Contini Bonacossi Firenze", "value":169},
+{"from":"Contini Bonacossi Firenze", "to":"Collezione Sh Kress New York Ny", "value":169},
+{"from":"Contini Bonacossi Firenze", "to":"Collezione Privata Italia", "value":123},
+{"from":"Philadelphia Museum Of Art Philadelphia Pa", "to":"Collezione Jg Johnson Philadelphia Pa", "value":121},
+{"from":"Collezione Jg Johnson Philadelphia Pa", "to":"Philadelphia Museum Of Art Philadelphia Pa", "value":121},
+{"from":"The Walters Art Museum Baltimora Md", "to":"Collezione M Massarenti Roma", "value":123},
+{"from":"Collezione M Massarenti Roma", "to":"The Walters Art Museum Baltimora Md", "value":123},
+{"from":"Mercato Antiquario Stoccolma", "to":"Collezione Privata Italia", "value":82},
+{"from":"Collezione Privata Italia", "to":"Contini Bonacossi Firenze", "value":123},
+{"from":"Collezione Privata Italia", "to":"Mercato Antiquario Stoccolma", "value":82},
+{"from":"Collezione Privata Italia", "to":"Collezione Privata Roma", "value":164},
+{"from":"Collezione Privata Italia", "to":"V Frascione Firenze", "value":82},
+{"from":"Collezione Privata Italia", "to":"Collezione Stramezzi Crema", "value":123},
+{"from":"Collezione Privata Italia", "to":"Collezione Privata Londra", "value":82},
+{"from":"Collezione Privata Italia", "to":"Asta Farsetti Prato", "value":123},
+{"from":"Collezione Privata Italia", "to":"Sestieri Roma", "value":123},
+{"from":"Collezione Privata Italia", "to":"Asta Christies Londra", "value":164},
+{"from":"Collezione Privata Italia", "to":"Mercato Antiquario Italia", "value":902},
+{"from":"Collezione Privata Italia", "to":"Mercato Antiquario Firenze", "value":82},
+{"from":"Collezione Privata Italia", "to":"Asta Sothebys Londra", "value":205},
+{"from":"Collezione Privata Italia", "to":"Mercato Antiquario Milano", "value":82},
+{"from":"Collezione Privata Italia", "to":"Collezione Spark New York Ny", "value":82},
+{"from":"Collezione Privata Italia", "to":"Asta Sothebys New York Ny", "value":123},
+{"from":"Collezione Privata Italia", "to":"Asta Pandolfini Firenze", "value":123},
+{"from":"Collezione Privata Italia", "to":"Collezione I Brass Venezia", "value":164},
+{"from":"Collezione Privata Italia", "to":"Collezione Privata Brasile", "value":82},
+{"from":"Collezione Privata Italia", "to":"Mercato Antiquario Assisi", "value":82},
+{"from":"Collezione Privata Italia", "to":"Moratilla Parigi", "value":82},
+{"from":"Collezione Privata Italia", "to":"Galleria Menaguale Verona", "value":82},
+{"from":"Collezione Privata Italia", "to":"Museo Thyssenbornemisza Madrid", "value":82},
+{"from":"Collezione Privata Italia", "to":"Collezione Odescalchi Roma", "value":82},
+{"from":"Collezione Privata Italia", "to":"Koetser New York Ny", "value":164},
+{"from":"Collezione Privata Italia", "to":"Asta Galardelli E Mazzoni Firenze", "value":82},
+{"from":"Collezione Privata Roma", "to":"Collezione Privata Italia", "value":164},
+{"from":"V Frascione Firenze", "to":"Collezione Privata Italia", "value":82},
+{"from":"Collezione Stramezzi Crema", "to":"Collezione Privata Italia", "value":123},
+{"from":"Collezione Privata Londra", "to":"Collezione Privata Italia", "value":82},
+{"from":"Asta Farsetti Prato", "to":"Collezione Privata Italia", "value":123},
+{"from":"Sestieri Roma", "to":"Collezione Privata Italia", "value":123},
+{"from":"Pinacoteca Dell'Accademia Carrara Bergamo", "to":"Collezione Carrara Bergamo", "value":120},
+{"from":"Collezione Carrara Bergamo", "to":"Pinacoteca Dellaccademia Carrara Bergamo", "value":120},
+{"from":"Asta Christies Londra", "to":"Collezione Privata Italia", "value":164},
+{"from":"Mercato Antiquario Italia", "to":"Collezione Privata Italia", "value":902},
+{"from":"Mercato Antiquario Firenze", "to":"Collezione Privata Italia", "value":82},
+{"from":"Asta Sothebys Londra", "to":"Collezione Privata Italia", "value":205},
+{"from":"Mercato Antiquario Milano", "to":"Collezione Privata Italia", "value":82},
+{"from":"Collezione Spark New York Ny", "to":"Collezione Privata Italia", "value":82},
+{"from":"Asta Sothebys New York Ny", "to":"Collezione Privata Italia", "value":123},
+{"from":"Asta Pandolfini Firenze", "to":"Collezione Privata Italia", "value":123},
+{"from":"Collezione I Brass Venezia", "to":"Collezione Privata Italia", "value":164},
+{"from":"Collezione Privata Brasile", "to":"Collezione Privata Italia", "value":82},
+{"from":"Mercato Antiquario Assisi", "to":"Collezione Privata Italia", "value":82},
+{"from":"Moratilla Parigi", "to":"Collezione Privata Italia", "value":82},
+{"from":"Galleria Menaguale Verona", "to":"Collezione Privata Italia", "value":82},
+{"from":"Museo Thyssenbornemisza Madrid", "to":"Collezione Privata Italia", "value":82},
+{"from":"Collezione Odescalchi Roma", "to":"Collezione Privata Italia", "value":82},
+{"from":"Koetser New York Ny", "to":"Collezione Privata Italia", "value":164},
+{"from":"Asta Galardelli E Mazzoni Firenze", "to":"Collezione Privata Italia", "value":82}
+]
+
+chart.dataFields.fromName = "from";
+chart.dataFields.toName = "to";
+chart.dataFields.value = "value";
+
+
+chart.nodePadding = 0.05;
+chart.minNodeSize = 0.03;
+chart.startAngle = 80;
+chart.endAngle = chart.startAngle + 360;
+chart.sortBy = "value";
+chart.fontSize = 10;
+
+var nodeTemplate = chart.nodes.template;
+nodeTemplate.readerTitle = "Click to show/hide or drag to rearrange";
+nodeTemplate.showSystemTooltip = true;
+nodeTemplate.propertyFields.fill = "color";
+nodeTemplate.tooltipText = "{name}'s exchanges: {total}";
+
+// when rolled over the node, make all the links rolled-over
+nodeTemplate.events.on("over", function(event) {    
+    var node = event.target;
+    node.outgoingDataItems.each(function(dataItem) {
+        if(dataItem.toNode){
+            dataItem.link.isHover = true;
+            dataItem.toNode.label.isHover = true;
+        }
+    })
+    node.incomingDataItems.each(function(dataItem) {
+        if(dataItem.fromNode){
+            dataItem.link.isHover = true;
+            dataItem.fromNode.label.isHover = true;
+        }
+    }) 
+
+    node.label.isHover = true;   
+})
+
+// when rolled out from the node, make all the links rolled-out
+nodeTemplate.events.on("out", function(event) {
+    var node = event.target;
+    node.outgoingDataItems.each(function(dataItem) {        
+        if(dataItem.toNode){
+            dataItem.link.isHover = false;                
+            dataItem.toNode.label.isHover = false;
+        }
+    })
+    node.incomingDataItems.each(function(dataItem) {
+        if(dataItem.fromNode){
+            dataItem.link.isHover = false;
+           dataItem.fromNode.label.isHover = false;
+        }
+    })
+
+    node.label.isHover = false;
+})
+
+var label = nodeTemplate.label;
+label.relativeRotation = 90;
+
+label.fillOpacity = 0.4;
+let labelHS = label.states.create("hover");
+labelHS.properties.fillOpacity = 1;
+
+nodeTemplate.cursorOverStyle = am4core.MouseCursorStyle.pointer;
+// this adapter makes non-main character nodes to be filled with color of the main character which he/she kissed most
+nodeTemplate.adapter.add("fill", function(fill, target) {
+    let node = target;
+    let counters = {};
+    let mainChar = false;
+    node.incomingDataItems.each(function(dataItem) {
+        if(colors[dataItem.toName]){
+            mainChar = true;
+        }
+
+        if(isNaN(counters[dataItem.fromName])){
+            counters[dataItem.fromName] = dataItem.value;
+        }
+        else{
+            counters[dataItem.fromName] += dataItem.value;
+        }
+    })
+    if(mainChar){
+        return fill;
+    }
+
+    let count = 0;
+    let color;
+    let biggest = 0;
+    let biggestName;
+
+    for(var name in counters){
+        if(counters[name] > biggest){
+            biggestName = name;
+            biggest = counters[name]; 
+        }        
+    }
+    if(colors[biggestName]){
+        fill = colors[biggestName];
+    }
+  
+    return fill;
+})
+
+// link template
+var linkTemplate = chart.links.template;
+linkTemplate.strokeOpacity = 0;
+linkTemplate.fillOpacity = 0.15;
+linkTemplate.tooltipText = "{fromName} & {toName}:{value.value}";
+
+var hoverState = linkTemplate.states.create("hover");
+hoverState.properties.fillOpacity = 0.7;
+hoverState.properties.strokeOpacity = 0.7;
+
+}); // end am4core.ready()
