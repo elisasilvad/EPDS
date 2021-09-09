@@ -78,7 +78,7 @@ am4core.ready(function() {
     addLine(brussels, uk);
     addLine(uk, cheltenham);
     addLine(cheltenham, paris);
-    addLine(paris, new_york);
+    addLine(paris, london);
 
 // Add plane
     var plane = lineSeries.mapLines.getIndex(0).lineObjects.create();
