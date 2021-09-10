@@ -11,7 +11,7 @@ am4core.ready(function() {
     chart.homeZoomLevel = 2.5;
     chart.homeGeoPoint = {
         latitude: 38,
-        longitude: -60
+        longitude: -40
     };
 
 // Create map polygon series
@@ -39,6 +39,7 @@ am4core.ready(function() {
         return city;
     }
 
+    var ferrara = addCity({ "latitude": 44.83333, "longitude": 11.61667 }, "Ferrara");
     var uk = addCity({ "latitude": 54.75844, "longitude": -2.69531 }, "United Kingdom");
     var london = addCity({ "latitude": 51.50853, "longitude": -0.12574 }, "London");
     var chicago = addCity({ "latitude": 41.85003, "longitude": -87.65005 }, "Chicago Mountains");
@@ -70,6 +71,7 @@ am4core.ready(function() {
         return line;
     }
 
+    addLine(ferrara, uk);
     addLine(uk, london);
     addLine(london, chicago);
     addLine(chicago, london);

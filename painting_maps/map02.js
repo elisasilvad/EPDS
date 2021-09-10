@@ -8,10 +8,10 @@ am4core.ready(function() {
     var chart = am4core.create("mapdiv", am4maps.MapChart);
     chart.geodata = am4geodata_worldLow;
     chart.projection = new am4maps.projections.Miller();
-    chart.homeZoomLevel = 2.5;
+    chart.homeZoomLevel = 2.7;
     chart.homeGeoPoint = {
         latitude: 38,
-        longitude: -60
+        longitude: -40
     };
 
 // Create map polygon series
@@ -78,7 +78,8 @@ am4core.ready(function() {
     addLine(brussels, uk);
     addLine(uk, cheltenham);
     addLine(cheltenham, paris);
-    addLine(paris, new_york);
+    addLine(paris, london);
+    addLine(london, new_york);
 
 // Add plane
     var plane = lineSeries.mapLines.getIndex(0).lineObjects.create();

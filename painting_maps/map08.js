@@ -8,10 +8,10 @@ am4core.ready(function() {
     var chart = am4core.create("mapdiv", am4maps.MapChart);
     chart.geodata = am4geodata_worldLow;
     chart.projection = new am4maps.projections.Miller();
-    chart.homeZoomLevel = 2.5;
+    chart.homeZoomLevel = 4;
     chart.homeGeoPoint = {
-        latitude: 38,
-        longitude: -60
+        latitude: 45,
+        longitude: -30
     };
 
 // Create map polygon series

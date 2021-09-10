@@ -11,7 +11,7 @@ am4core.ready(function() {
     chart.homeZoomLevel = 2.5;
     chart.homeGeoPoint = {
         latitude: 38,
-        longitude: -60
+        longitude: -40
     };
 
 // Create map polygon series
@@ -39,10 +39,12 @@ am4core.ready(function() {
         return city;
     }
 
-    var rome = addCity({ "latitude": 41.89193, "longitude": 12.51133 }, "Rome");
-    var baltimore = addCity({ "latitude": 39.29038, "longitude": -76.61219 }, "Baltimore");
-    var bologna = addCity({ "latitude": 44.49381, "longitude": 11.33875 }, "Bologna");
-    var modena = addCity({ "latitude": 44.64783, "longitude": 10.92539 }, "Modena");
+    var paris = addCity({ "latitude": 48.85341, "longitude": 2.3488 }, "Paris");
+    var uk = addCity({ "latitude": 54.75844, "longitude": -2.69531 }, "United Kingdom");
+    var london = addCity({ "latitude": 51.50853, "longitude": -0.12574 }, "London");
+    var florence = addCity({ "latitude": 43.77925, "longitude": 11.24626 }, "Florence");
+    var milan = addCity({ "latitude": 45.46427, "longitude": 9.18951 }, "Milan");
+    var new_york = addCity({ "latitude": 40.71427, "longitude": -74.00597 }, "New York");
 
 // Add lines
     var lineSeries = chart.series.push(new am4maps.MapArcSeries());
@@ -70,9 +72,11 @@ am4core.ready(function() {
         return line;
     }
 
-    addLine(rome, baltimore);
-    addLine(baltimore, bologna);
-    addLine(bologna, modena);
+    addLine(paris, uk);
+    addLine(uk, london);
+    addLine(london, florence);
+    addLine(florence, milan);
+    addLine(milan, new_york);
 
 // Add plane
     var plane = lineSeries.mapLines.getIndex(0).lineObjects.create();

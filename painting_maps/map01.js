@@ -71,6 +71,7 @@ am4core.ready(function() {
         return line;
     }
 
+    addLine(london, uk);
     addLine(uk, london);
     addLine(london, keir);
     addLine(keir, london);

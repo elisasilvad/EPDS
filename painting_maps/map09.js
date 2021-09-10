@@ -10,8 +10,8 @@ am4core.ready(function() {
     chart.projection = new am4maps.projections.Miller();
     chart.homeZoomLevel = 2.5;
     chart.homeGeoPoint = {
-        latitude: 38,
-        longitude: -60
+        latitude: 45,
+        longitude: -40
     };
 
 // Create map polygon series
@@ -71,6 +71,7 @@ am4core.ready(function() {
         return line;
     }
 
+    addLine(paris, france);
     addLine(france, paris);
     addLine(paris, new_york);
     addLine(new_york, copenhagen);

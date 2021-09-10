@@ -11,7 +11,7 @@ am4core.ready(function() {
     chart.homeZoomLevel = 2.5;
     chart.homeGeoPoint = {
         latitude: 38,
-        longitude: -60
+        longitude: -40
     };
 
 // Create map polygon series
@@ -72,6 +72,7 @@ am4core.ready(function() {
         return line;
     }
 
+    addLine(uk, london);
     addLine(london, uk);
     addLine(uk, london);
     addLine(london, florence);
