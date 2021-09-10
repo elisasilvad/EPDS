@@ -33,16 +33,11 @@
         width: 100%;
         height: 500px;
     }
-
-     #mapid {
-         width: 1500px;
-         height: 512px;
-         border: 1px solid #ccc;
-        }
-
-        .leaflet-container {
-            background: #fff;
-        }
+    #mapid {
+        width: auto;
+        height: 512px;
+        border: 1px solid #ccc;
+    }
     
 </style>
 
@@ -59,14 +54,19 @@
 
 <!-- Chart code -->
 <script src="viz.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css" type="text/css" crossorigin="">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js" crossorigin=""></script>
-
 
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+<!--current country map-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css" type="text/css"
+      crossorigin="">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js" crossorigin=""></script>
+
+
+</script>
 
 </head>
 <body id="page-top" class="politics_version">
@@ -262,13 +262,20 @@
     <div class="container">
         <div class="section-title text-left">
             <h3>STOP 1: COUNTRIES</h3>
-            <p>In order to discover the traces that Italian works of art leave in their path, we first had to see their direction around the world. 
-	       According to the data that we examined, outside Italy but within the borders of Europe, there are up about to <mark>425 pieces</mark>, 
-	       while outside the borders of Europe, more than <mark>1770 pieces</mark> are being hosted from several institutions, with the main country-keeper being <i>USA</i>.</p>
+            <p>In order to discover the traces that Italian works of art leave in their path, we first had to see their
+                direction around the world.
+                According to the data that we examined, outside Italy but within the borders of Europe, there are up
+                about to
+                <mark>425 pieces</mark>
+                ,
+                while outside the borders of Europe, more than
+                <mark>1770 pieces</mark>
+                are being hosted from several institutions, with the main country-keeper being <i>USA</i>.
+            </p>
         </div><!-- end title -->
-	    <div onload="init()">
-        <div id="mapid"></div>   
-     </div>
+        <body onload="init()">
+            <div id="mapid"></div>
+        </body>
     </div><!-- end container -->
 </div><!-- end section -->
 
@@ -327,15 +334,22 @@
     <div class="container">
         <div class="section-title text-left">
             <h3>STOP 3: INSTITUTIONS</h3>
-            <p>However, import and exprot dynamic cannot be examined without a close up in the institutions and their contribution to the feild.</p>
+            <p>However, import and exprot dynamic cannot be examined without a close up in the institutions and their
+                contribution to the feild.</p>
             <br>
             <br>
             <div id="chartdiv6" class="chartdiv"></div>
-            <p style="font-size:15px; width:75%; text-align: right; margin-left:23%">As was to be expected, Italy turns out to be the largest exporter of Italian paintings due to the exchange acts of its institutions. Among the 20 that sell Italian paintings, there are as many as 12 Italian entities, public and private, with the absolute dominance on the market of the Private Collection, which stands out among all the others for the large amount of paintings sold over time.</p>
+            <p style="font-size:15px; width:75%; text-align: right; margin-left:23%">As was to be expected, Italy turns
+                out to be the largest exporter of Italian paintings due to the exchange acts of its institutions. Among
+                the 20 that sell Italian paintings, there are as many as 12 Italian entities, public and private, with
+                the absolute dominance on the market of the Private Collection, which stands out among all the others
+                for the large amount of paintings sold over time.</p>
             <br>
             <br>
             <div id="chartdiv5" class="chartdiv"></div>
-            <p style="font-size:15px; width:75%; text-align: right; margin-left:23%">But the same thing can be said, surprisingly enough, about acquisitions as well. 10 Italian institutions are among the 20 largest acquirings of Italian art in the world.</p>
+            <p style="font-size:15px; width:75%; text-align: right; margin-left:23%">But the same thing can be said,
+                surprisingly enough, about acquisitions as well. 10 Italian institutions are among the 20 largest
+                acquirings of Italian art in the world.</p>
             <br>
             <br>
             <p>Nonetheless, even the differences between the two acts is important.</p>
@@ -345,7 +359,8 @@
             <br>
             <br>
             <br>
-            <p>Provenance makes necessary to rethink about instituions as well. They pass to be the place where art is to elements in a larger network.</p>
+            <p>Provenance makes necessary to rethink about instituions as well. They pass to be the place where art is
+                to elements in a larger network.</p>
             <br>
             <br>
             <div id="chartdiv8" class="chartdiv"></div>
