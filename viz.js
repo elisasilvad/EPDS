@@ -1,4 +1,19 @@
 // CITIES PIE ------------------------------------------------------------------------------------------------------------------------------------------------------
+//COUNTRIES
+           function init() {
+            // create map and set center and zoom level
+            var map = new L.map('mapid');
+            map.setView([42.83333,12.83333],5);
+            
+            var mapboxTileUrl = 'https://api.mapbox.com/styles/v1/marimari1512/cktcoogkn0kga17n7gdmk1zcf/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibWFyaW1hcmkxNTEyIiwiYSI6ImNrdDAxbWJicDAwdzUycG1oeDU5NXZuMG4ifQ.5EtRuK4OZJ5AQLan_bvapQ';
+            
+            L.tileLayer(mapboxTileUrl, {
+                attribution: 'Background map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+            }).addTo(map);         
+          } 
+		  
+		  
+       
 // ACQUIRING
 am4core.ready(function() {
 
