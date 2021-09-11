@@ -1002,7 +1002,7 @@ am4core.ready(function () {
         {"from": "Pinacoteca Dell'Accademia Carrara Bergamo", "to": "Collezione Carrara Bergamo", "value": 120},
         {"from": "Collezione Carrara Bergamo", "to": "Pinacoteca Dellaccademia Carrara Bergamo", "value": 120},
         {"from": "Asta Christies Londra", "to": "Collezione Privata Italia", "value": 164},
-        {"from": "Mercato Antiquario Italia", "to": "Collezione Privata Italia", "value": 902},
+        //{"from": "Mercato Antiquario Italia", "to": "Collezione Privata Italia", "value": 902},
         {"from": "Mercato Antiquario Firenze", "to": "Collezione Privata Italia", "value": 82},
         {"from": "Asta Sothebys Londra", "to": "Collezione Privata Italia", "value": 205},
         {"from": "Mercato Antiquario Milano", "to": "Collezione Privata Italia", "value": 82},
@@ -1131,5 +1131,16 @@ am4core.ready(function () {
     var hoverState = linkTemplate.states.create("hover");
     hoverState.properties.fillOpacity = 0.7;
     hoverState.properties.strokeOpacity = 0.7;
+
+    var topContainer = chart.chartContainer.createChild(am4core.Container);
+    topContainer.layout = "absolute";
+    topContainer.toBack();
+    topContainer.paddingBottom = 15;
+    topContainer.width = am4core.percent(100);
+
+    var dateTitle = topContainer.createChild(am4core.Label);
+    dateTitle.text = "[font-size:18px]A network spread \nall over the world: :\n[bold font-size:30px]the exchange \nrelationships \nbetween \nart institutions[/]";
+    dateTitle.fontWeight = 600;
+    dateTitle.align = "left";
 
 }); // end am4core.ready()
