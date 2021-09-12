@@ -600,7 +600,7 @@ xclip
 .section-title p {
     color: #999;
     font-weight: 400;
-    font-size: 18px;
+    /*font-size: 18px;*/
     line-height: 33px;
     margin: 0;
 }
@@ -690,8 +690,8 @@ xclip
 
 .right-box-pro{
 	position: relative;
-	-webkit-box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 0.3);
-	box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 0.3);
+	/**-webkit-box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 0.3);*/
 }
 .right-box-pro img{
 	position: relative;
