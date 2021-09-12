@@ -8,10 +8,10 @@ am4core.ready(function() {
     var chart = am4core.create("mapdiv", am4maps.MapChart);
     chart.geodata = am4geodata_worldLow;
     chart.projection = new am4maps.projections.Miller();
-    chart.homeZoomLevel = 2.7;
+    chart.homeZoomLevel = 2.5;
     chart.homeGeoPoint = {
         latitude: 38,
-        longitude: -20
+        longitude: -40
     };
 
 // Create map polygon series
@@ -39,13 +39,11 @@ am4core.ready(function() {
         return city;
     }
 
-    var madrid = addCity({ "latitude": 40.4165, "longitude": -3.70256 }, "Madrid");
-    var france = addCity({ "latitude": 46, "longitude": 2 }, "France");
-    var uk = addCity({ "latitude": 54.75844, "longitude": -2.69531 }, "United Kingdom");
-    var cobham = addCity({ "latitude": 51.32997, "longitude": -0.4113 }, "Cobham");
-    var paris = addCity({ "latitude": 48.85341, "longitude": 2.3488 }, "Paris");
-    var shrewsbury = addCity({ "latitude": 52.71009, "longitude": -2.75208 }, "Shrewsbury");
-    var boston = addCity({ "latitude": 42.35843, "longitude": -71.05977 }, "Boston");
+    var london = addCity({ "latitude": 51.50853, "longitude": -0.12574 }, "London");
+    var florence = addCity({ "latitude": 43.77925, "longitude": 11.24626 }, "Florence");
+    var new_york = addCity({ "latitude": 40.71427, "longitude": -74.00597 }, "New York");
+    var washington = addCity({ "latitude": 38.89511, "longitude": -77.03637 }, "Washington");
+    var coral_gables = addCity({ "latitude": 25.72149, "longitude": -80.26838 }, "Coral Gables");
 
 // Add lines
     var lineSeries = chart.series.push(new am4maps.MapArcSeries());
@@ -73,12 +71,12 @@ am4core.ready(function() {
         return line;
     }
 
-    addLine(madrid, france);
-    addLine(france, paris);
-    addLine(paris, uk);
-    addLine(uk, shrewsbury);
-    addLine(shrewsbury, cobham);
-    addLine(cobham, boston);
+    addLine(london, florence);
+    addLine(florence, london);
+    addLine(london, new_york);
+    addLine(new_york, washington);
+    addLine(washington, new_york);
+    addLine(new_york, coral_gables);
 
 // Add plane
     var plane = lineSeries.mapLines.getIndex(0).lineObjects.create();
