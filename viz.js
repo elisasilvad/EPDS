@@ -27,35 +27,35 @@ am4core.ready(function () {
 // Add data
 
     chart.data = [{
-        "city": "Londra",
-        "paintings": 2082
-    }, {
-        "city": "New-york-ny",
-        "paintings": 1809
-    }, {
-        "city": "Roma",
-        "paintings": 1241
-    }, {
-        "city": "Firenze",
-        "paintings": 965
-    }, {
-        "city": "Milano",
-        "paintings": 965
-    }, {
-        "city": "Venezia",
-        "paintings": 341
-    }, {
-        "city": "Bergamo",
-        "paintings": 325
-    }, {
-        "city": "Bologna",
-        "paintings": 321
-    }, {
-        "city": "Torino",
-        "paintings": 290
-    }, {
-        "city": "Others",
-        "paintings": 8756
+        "city":"Londra",
+        "paintings":1258
+    },{
+        "city":"New-york-ny",
+        "paintings":999
+    },{
+        "city":"Roma",
+        "paintings":765
+    },{
+        "city":"Milano",
+        "paintings":603
+    },{
+        "city":"Firenze",
+        "paintings":568
+    },{
+        "city":"Bologna",
+        "paintings":225
+    },{
+        "city":"Torino",
+        "paintings":219
+    },{
+        "city":"Venezia",
+        "paintings":214
+    },{
+        "city":"Bergamo",
+        "paintings":195
+    },{
+        "city":"Others",
+        "paintings":5819
     }]
 
 // Add and configure Series
@@ -101,35 +101,35 @@ am4core.ready(function () {
 // Add data
 
     chart.data = [{
-        "city": "Londra",
-        "paintings": 2334
-    }, {
-        "city": "New-york-ny",
-        "paintings": 2138
-    }, {
-        "city": "Firenze",
-        "paintings": 1614
-    }, {
-        "city": "Roma",
-        "paintings": 1515
-    }, {
-        "city": "Milano",
-        "paintings": 1010
-    }, {
-        "city": "Venezia",
-        "paintings": 573
-    }, {
-        "city": "Parigi",
-        "paintings": 516
-    }, {
-        "city": "Regno-unito",
-        "paintings": 447
-    }, {
-        "city": "Torino",
-        "paintings": 322
-    }, {
-        "city": "Others",
-        "paintings": 4691
+        "city":"Londra",
+        "paintings":1395
+    },{
+        "city":"New-york-ny",
+        "paintings":1139
+    },{
+        "city":"Roma",
+        "paintings":951
+    },{
+        "city":"Firenze",
+        "paintings":916
+    },{
+        "city":"Milano",
+        "paintings":662
+    },{
+        "city":"Venezia",
+        "paintings":355
+    },{
+        "city":"Parigi",
+        "paintings":306
+    },{
+        "city":"Regno-unito",
+        "paintings":263
+    },{
+        "city":"Torino",
+        "paintings":242
+    },{
+        "city":"Others",
+        "paintings":4647
     }]
 
 // Add and configure Series
@@ -179,45 +179,45 @@ am4core.ready(function () {
 
 // Add data
     chart.data = [{
-        "city": "Londra",
-        "acq_paintings": 2082,
-        "giv_paintings": 2334
-    }, {
-        "city": "New-york-ny",
-        "acq_paintings": 1809,
-        "giv_paintings": 2138
-    }, {
-        "city": "Roma",
-        "acq_paintings": 1241,
-        "giv_paintings": 1515
-    }, {
-        "city": "Firenze",
-        "acq_paintings": 965,
-        "giv_paintings": 1614
-    }, {
-        "city": "Milano",
-        "acq_paintings": 965,
-        "giv_paintings": 1010
-    }, {
-        "city": "Venezia",
-        "acq_paintings": 341,
-        "giv_paintings": 573
-    }, {
-        "city": "Bergamo",
-        "acq_paintings": 325,
-        "giv_paintings": 282
-    }, {
-        "city": "Bologna",
-        "acq_paintings": 321,
-        "giv_paintings": 305
-    }, {
-        "city": "Torino",
-        "acq_paintings": 290,
-        "giv_paintings": 322
-    }, {
-        "city": "Others",
-        "acq_paintings": 8756,
-        "giv_paintings": 4691
+        "city":"Londra",
+        "acq_paintings":1258,
+        "giv_paintings":1395
+    },{
+        "city":"New-york-ny",
+        "acq_paintings":999,
+        "giv_paintings":1139
+    },{
+        "city":"Roma",
+        "acq_paintings":765,
+        "giv_paintings":951
+    },{
+        "city":"Milano",
+        "acq_paintings":603,
+        "giv_paintings":662
+    },{
+        "city":"Firenze",
+        "acq_paintings":568,
+        "giv_paintings":916
+    },{
+        "city":"Bologna",
+        "acq_paintings":225,
+        "giv_paintings":202
+    },{
+        "city":"Torino",
+        "acq_paintings":219,
+        "giv_paintings":242
+    },{
+        "city":"Venezia",
+        "acq_paintings":214,
+        "giv_paintings":355
+    },{
+        "city":"Bergamo",
+        "acq_paintings":195,
+        "giv_paintings":169
+    },{
+        "city":"Others",
+        "acq_paintings":5819,
+        "giv_paintings":0
     }];
 
 // Add and configure Series
@@ -572,65 +572,65 @@ am4core.ready(function () {
     chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
 
     chart.data = [{
-        "inst": "Collezione Privata Italia",
-        "paintings": 3813
-    }, {
-        "inst": "Mercato Antiquario Italia",
-        "paintings": 1254
-    }, {
-        "inst": "Asta Christies Londra",
-        "paintings": 669
-    }, {
-        "inst": "Collezione Privata Roma",
-        "paintings": 418
-    }, {
-        "inst": "Asta Sothebys Londra",
-        "paintings": 415
-    }, {
-        "inst": "Collezione Sh Kress New York Ny",
-        "paintings": 344
-    }, {
-        "inst": "Pinacoteca Dellaccademia Carrara Bergamo",
-        "paintings": 248
-    }, {
-        "inst": "Asta Sothebys New York Ny",
-        "paintings": 246
-    }, {
-        "inst": "Asta Christies New York Ny",
-        "paintings": 222
-    }, {
-        "inst": "Mercato Antiquario Milano",
-        "paintings": 202
-    }, {
-        "inst": "National Gallery Of Art Washington Dc",
-        "paintings": 183
-    }, {
-        "inst": "Contini Bonacossi Firenze",
-        "paintings": 139
-    }, {
-        "inst": "The Walters Art Museum Baltimora Md",
-        "paintings": 138
-    }, {
-        "inst": "Collezione Privata Londra",
-        "paintings": 136
-    }, {
-        "inst": "Asta Farsetti Prato",
-        "paintings": 131
-    }, {
-        "inst": "Mercato Antiquario Firenze",
-        "paintings": 129
-    }, {
-        "inst": "Philadelphia Museum Of Art Philadelphia Pa",
-        "paintings": 128
-    }, {
-        "inst": "Collezione Privata Milano",
-        "paintings": 126
-    }, {
-        "inst": "Mercato Antiquario Roma",
-        "paintings": 102
-    }, {
-        "inst": "Museo Thyssenbornemisza Madrid",
-        "paintings": 100
+        "inst":"Collezione Privata Italia",
+        "paintings":2378
+    },{
+        "inst":"Mercato Antiquario Italia",
+        "paintings":1078
+    },{
+        "inst":"Asta Christies Londra",
+        "paintings":355
+    },{
+        "inst":"Collezione Privata Roma",
+        "paintings":254
+    },{
+        "inst":"Asta Sothebys Londra",
+        "paintings":237
+    },{
+        "inst":"Unknown Istitution",
+        "paintings":220
+    },{
+        "inst":"Collezione Sh Kress New York Ny",
+        "paintings":198
+    },{
+        "inst":"Pinacoteca Dellaccademia Carrara Bergamo",
+        "paintings":139
+    },{
+        "inst":"Asta Sothebys New York Ny",
+        "paintings":127
+    },{
+        "inst":"Asta Christies New York Ny",
+        "paintings":127
+    },{
+        "inst":"National Gallery Of Art Washington Dc",
+        "paintings":120
+    },{
+        "inst":"Mercato Antiquario Milano",
+        "paintings":118
+    },{
+        "inst":"Collezione Privata Londra",
+        "paintings":112
+    },{
+        "inst":"Mercato Antiquario Firenze",
+        "paintings":106
+    },{
+        "inst":"The Walters Art Museum Baltimora Md",
+        "paintings":85
+    },{
+        "inst":"Collezione Privata Milano",
+        "paintings":80
+    },{
+        "inst":"Contini Bonacossi Firenze",
+        "paintings":78
+    },{
+        "inst":"Mercato Antiquario Roma",
+        "paintings":74
+    },{
+        "inst":"Philadelphia Museum Of Art Philadelphia Pa",
+        "paintings":72
+    },{
+        "inst":"Museo Thyssenbornemisza Madrid",
+        "paintings":54
     }]
 
     var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
@@ -701,65 +701,65 @@ am4core.ready(function () {
     chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
 
     chart.data = [{
-        "inst": "Collezione Privata Italia",
-        "paintings": 1845
-    }, {
-        "inst": "Mercato Antiquario Italia",
-        "paintings": 1199
-    }, {
-        "inst": "Asta Christies Londra",
-        "paintings": 628
-    }, {
-        "inst": "Asta Sothebys Londra",
-        "paintings": 538
-    }, {
-        "inst": "Collezione Sh Kress New York Ny",
-        "paintings": 483
-    }, {
-        "inst": "Contini Bonacossi Firenze",
-        "paintings": 359
-    }, {
-        "inst": "Mercato Antiquario Milano",
-        "paintings": 277
-    }, {
-        "inst": "Asta Sothebys New York Ny",
-        "paintings": 248
-    }, {
-        "inst": "Sestieri Roma",
-        "paintings": 184
-    }, {
-        "inst": "Collezione I Brass Venezia",
-        "paintings": 177
-    }, {
-        "inst": "Collezione Cook Londra",
-        "paintings": 166
-    }, {
-        "inst": "Koetser New York Ny",
-        "paintings": 165
-    }, {
-        "inst": "Asta Pandolfini Firenze",
-        "paintings": 156
-    }, {
-        "inst": "F Mont New York Ny",
-        "paintings": 134
-    }, {
-        "inst": "Mercato Antiquario Firenze",
-        "paintings": 129
-    }, {
-        "inst": "Collezione M Massarenti Roma",
-        "paintings": 124
-    }, {
-        "inst": "Collezione Stramezzi Crema",
-        "paintings": 123
-    }, {
-        "inst": "Collezione Jg Johnson Philadelphia Pa",
-        "paintings": 122
-    }, {
-        "inst": "Collezione Carrara Bergamo",
-        "paintings": 120
-    }, {
-        "inst": "Mercato Antiquario Roma",
-        "paintings": 110
+        "inst":"Collezione Privata Italia",
+        "paintings":1517
+    },{
+        "inst":"Mercato Antiquario Italia",
+        "paintings":616
+    },{
+        "inst":"Asta Sothebys Londra",
+        "paintings":364
+    },{
+        "inst":"Asta Christies Londra",
+        "paintings":336
+    },{
+        "inst":"Collezione Sh Kress New York Ny",
+        "paintings":305
+    },{
+        "inst":"Mercato Antiquario Milano",
+        "paintings":205
+    },{
+        "inst":"Contini Bonacossi Firenze",
+        "paintings":186
+    },{
+        "inst":"Mercato Antiquario Firenze",
+        "paintings":106
+    },{
+        "inst":"Asta Sothebys New York Ny",
+        "paintings":101
+    },{
+        "inst":"Collezione Cook Londra",
+        "paintings":94
+    },{
+        "inst":"F Mont New York Ny",
+        "paintings":94
+    },{
+        "inst":"Mercato Antiquario Roma",
+        "paintings":92
+    },{
+        "inst":"Collezione I Brass Venezia",
+        "paintings":87
+    },{
+        "inst":"Galleria Menaguale Verona",
+        "paintings":87
+    },{
+        "inst":"Sestieri Roma",
+        "paintings":84
+    },{
+        "inst":"Mercato Antiquario Assisi",
+        "paintings":83
+    },{
+        "inst":"Collezione M Massarenti Roma",
+        "paintings":77
+    },{
+        "inst":"Collezione Jg Johnson Philadelphia Pa",
+        "paintings":69
+    },{
+        "inst":"Collezione Costabili Ferrara",
+        "paintings":67
+    },{
+        "inst":"Asta Finarte Milano",
+        "paintings":59
     }]
 
     var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
@@ -860,21 +860,21 @@ am4core.ready(function () {
     }
 
     chart.data = [{
-        category: "Collezione-privata-italia",
-        first: 3813,
-        second: 1845
+        category: "Collezione Privata Italia",
+        first: 2378,
+        second: 1517
     }, {
-        category: "Mercato-antiquario-italia",
-        first: 1254,
-        second: 1199
+        category: "Mercato Antiquario Italia",
+        first: 1078,
+        second: 616
     }, {
-        category: "Asta-christies-londra",
-        first: 669,
-        second: 628
+        category: "Asta Christies Londra",
+        first: 355,
+        second: 336
     }, {
-        category: "Collezione-privata-roma",
-        first: 418,
-        second: 58
+        category: "Collezione Privata Roma",
+        first: 254,
+        second: 42
     }
     ]
 
@@ -950,74 +950,30 @@ am4core.ready(function () {
 // data was provided by: https://www.reddit.com/user/notrudedude
 
     chart.data = [
-        {"from": "National Gallery Of Art Washington Dc", "to": "Collezione Sh Kress New York Ny", "value": 135},
-        {"from": "Collezione Sh Kress New York Ny", "to": "National Gallery Of Art Washington Dc", "value": 135},
-        {"from": "Collezione Sh Kress New York Ny", "to": "Contini Bonacossi Firenze", "value": 169},
-        {"from": "Contini Bonacossi Firenze", "to": "Collezione Sh Kress New York Ny", "value": 169},
-        {"from": "Contini Bonacossi Firenze", "to": "Collezione Privata Italia", "value": 123},
-        {
-            "from": "Philadelphia Museum Of Art Philadelphia Pa",
-            "to": "Collezione Jg Johnson Philadelphia Pa",
-            "value": 121
-        },
-        {
-            "from": "Collezione Jg Johnson Philadelphia Pa",
-            "to": "Philadelphia Museum Of Art Philadelphia Pa",
-            "value": 121
-        },
-        {"from": "The Walters Art Museum Baltimora Md", "to": "Collezione M Massarenti Roma", "value": 123},
-        {"from": "Collezione M Massarenti Roma", "to": "The Walters Art Museum Baltimora Md", "value": 123},
-        {"from": "Mercato Antiquario Stoccolma", "to": "Collezione Privata Italia", "value": 82},
-        {"from": "Collezione Privata Italia", "to": "Contini Bonacossi Firenze", "value": 123},
-        {"from": "Collezione Privata Italia", "to": "Mercato Antiquario Stoccolma", "value": 82},
-        {"from": "Collezione Privata Italia", "to": "Collezione Privata Roma", "value": 164},
-        {"from": "Collezione Privata Italia", "to": "V Frascione Firenze", "value": 82},
-        {"from": "Collezione Privata Italia", "to": "Collezione Stramezzi Crema", "value": 123},
-        {"from": "Collezione Privata Italia", "to": "Collezione Privata Londra", "value": 82},
-        {"from": "Collezione Privata Italia", "to": "Asta Farsetti Prato", "value": 123},
-        {"from": "Collezione Privata Italia", "to": "Sestieri Roma", "value": 123},
-        {"from": "Collezione Privata Italia", "to": "Asta Christies Londra", "value": 164},
-        {"from": "Collezione Privata Italia", "to": "Mercato Antiquario Italia", "value": 902},
-        {"from": "Collezione Privata Italia", "to": "Mercato Antiquario Firenze", "value": 82},
-        {"from": "Collezione Privata Italia", "to": "Asta Sothebys Londra", "value": 205},
-        {"from": "Collezione Privata Italia", "to": "Mercato Antiquario Milano", "value": 82},
-        {"from": "Collezione Privata Italia", "to": "Collezione Spark New York Ny", "value": 82},
-        {"from": "Collezione Privata Italia", "to": "Asta Sothebys New York Ny", "value": 123},
-        {"from": "Collezione Privata Italia", "to": "Asta Pandolfini Firenze", "value": 123},
-        {"from": "Collezione Privata Italia", "to": "Collezione I Brass Venezia", "value": 164},
-        {"from": "Collezione Privata Italia", "to": "Collezione Privata Brasile", "value": 82},
-        {"from": "Collezione Privata Italia", "to": "Mercato Antiquario Assisi", "value": 82},
-        {"from": "Collezione Privata Italia", "to": "Moratilla Parigi", "value": 82},
-        {"from": "Collezione Privata Italia", "to": "Galleria Menaguale Verona", "value": 82},
-        {"from": "Collezione Privata Italia", "to": "Museo Thyssenbornemisza Madrid", "value": 82},
-        {"from": "Collezione Privata Italia", "to": "Collezione Odescalchi Roma", "value": 82},
-        {"from": "Collezione Privata Italia", "to": "Koetser New York Ny", "value": 164},
-        {"from": "Collezione Privata Italia", "to": "Asta Galardelli E Mazzoni Firenze", "value": 82},
-        {"from": "Collezione Privata Roma", "to": "Collezione Privata Italia", "value": 164},
-        {"from": "V Frascione Firenze", "to": "Collezione Privata Italia", "value": 82},
-        {"from": "Collezione Stramezzi Crema", "to": "Collezione Privata Italia", "value": 123},
-        {"from": "Collezione Privata Londra", "to": "Collezione Privata Italia", "value": 82},
-        {"from": "Asta Farsetti Prato", "to": "Collezione Privata Italia", "value": 123},
-        {"from": "Sestieri Roma", "to": "Collezione Privata Italia", "value": 123},
-        {"from": "Pinacoteca Dell'Accademia Carrara Bergamo", "to": "Collezione Carrara Bergamo", "value": 120},
-        {"from": "Collezione Carrara Bergamo", "to": "Pinacoteca Dellaccademia Carrara Bergamo", "value": 120},
-        {"from": "Asta Christies Londra", "to": "Collezione Privata Italia", "value": 164},
-        //{"from": "Mercato Antiquario Italia", "to": "Collezione Privata Italia", "value": 902},
-        {"from": "Mercato Antiquario Firenze", "to": "Collezione Privata Italia", "value": 82},
-        {"from": "Asta Sothebys Londra", "to": "Collezione Privata Italia", "value": 205},
-        {"from": "Mercato Antiquario Milano", "to": "Collezione Privata Italia", "value": 82},
-        {"from": "Collezione Spark New York Ny", "to": "Collezione Privata Italia", "value": 82},
-        {"from": "Asta Sothebys New York Ny", "to": "Collezione Privata Italia", "value": 123},
-        {"from": "Asta Pandolfini Firenze", "to": "Collezione Privata Italia", "value": 123},
-        {"from": "Collezione I Brass Venezia", "to": "Collezione Privata Italia", "value": 164},
-        {"from": "Collezione Privata Brasile", "to": "Collezione Privata Italia", "value": 82},
-        {"from": "Mercato Antiquario Assisi", "to": "Collezione Privata Italia", "value": 82},
-        {"from": "Moratilla Parigi", "to": "Collezione Privata Italia", "value": 82},
-        {"from": "Galleria Menaguale Verona", "to": "Collezione Privata Italia", "value": 82},
-        {"from": "Museo Thyssenbornemisza Madrid", "to": "Collezione Privata Italia", "value": 82},
-        {"from": "Collezione Odescalchi Roma", "to": "Collezione Privata Italia", "value": 82},
-        {"from": "Koetser New York Ny", "to": "Collezione Privata Italia", "value": 164},
-        {"from": "Asta Galardelli E Mazzoni Firenze", "to": "Collezione Privata Italia", "value": 82}
+        {"from":"National Gallery Of Art Washington Dc", "to":"Collezione Sh Kress New York Ny", "value":90},
+        {"from":"Collezione Sh Kress New York Ny", "to":"National Gallery Of Art Washington Dc", "value":90},
+        {"from":"Collezione Sh Kress New York Ny", "to":"Contini Bonacossi Firenze", "value":102},
+        {"from":"Contini Bonacossi Firenze", "to":"Collezione Sh Kress New York Ny", "value":102},
+        {"from":"Collezione Privata Roma", "to":"Collezione Privata Italia", "value":82},
+        {"from":"Collezione Privata Italia", "to":"Collezione Privata Roma", "value":82},
+        {"from":"Collezione Privata Italia", "to":"Collezione Privata Londra", "value":82},
+        {"from":"Collezione Privata Italia", "to":"Asta Christies Londra", "value":82},
+        {"from":"Collezione Privata Italia", "to":"Mercato Antiquario Italia", "value":451},
+        {"from":"Collezione Privata Italia", "to":"Mercato Antiquario Firenze", "value":82},
+        {"from":"Collezione Privata Italia", "to":"Asta Sothebys Londra", "value":164},
+        {"from":"Collezione Privata Italia", "to":"Mercato Antiquario Milano", "value":164},
+        {"from":"Collezione Privata Italia", "to":"Collezione I Brass Venezia", "value":82},
+        {"from":"Collezione Privata Italia", "to":"Mercato Antiquario Assisi", "value":82},
+        {"from":"Collezione Privata Italia", "to":"Galleria Menaguale Verona", "value":82},
+        {"from":"Collezione Privata Londra", "to":"Collezione Privata Italia", "value":82},
+        {"from":"Asta Christies Londra", "to":"Collezione Privata Italia", "value":82},
+        {"from":"Mercato Antiquario Italia", "to":"Collezione Privata Italia", "value":451},
+        {"from":"Mercato Antiquario Firenze", "to":"Collezione Privata Italia", "value":82},
+        {"from":"Asta Sothebys Londra", "to":"Collezione Privata Italia", "value":164},
+        {"from":"Mercato Antiquario Milano", "to":"Collezione Privata Italia", "value":164},
+        {"from":"Collezione I Brass Venezia", "to":"Collezione Privata Italia", "value":82},
+        {"from":"Mercato Antiquario Assisi", "to":"Collezione Privata Italia", "value":82},
+        {"from":"Galleria Menaguale Verona", "to":"Collezione Privata Italia", "value":82}
     ]
 
     chart.dataFields.fromName = "from";
