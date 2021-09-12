@@ -10,3 +10,6 @@ This project was carried out by Marina Christodoulou (storytelling, communicatio
 Copyright material available on this website is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence unless indicated otherwise.
 Zeri metadata fall under the license Attribution 4.0 International (CC-BY 4.0); images used in stop 4 included, and their use is subject to Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0).
 All the visualizations are directly referenced by an attribution logo at the bottom of every chart.
+
+- Check the project on Binder [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/elisasilvad/the_journey_of_art/main)
+- Browse the website [https://elisasilvad.github.io/the_journey_of_art/](https://elisasilvad.github.io/the_journey_of_art/)
